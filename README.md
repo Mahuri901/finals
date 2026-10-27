@@ -46,6 +46,15 @@ Scan QR code with Expo Go. Or press `W` for web.
 
 ---
 
+## STEP 4 — Connect Supabase
+
+1. Copy `.env.example` to `.env`.
+2. Set `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` from the Supabase project settings.
+3. Run `supabase/schema.sql` once in the Supabase SQL Editor.
+4. Restart Expo after changing `.env`.
+
+The SQL script creates the profiles, events, and attendance tables and enables row-level security.
+
 ## TROUBLESHOOTING
 
 | Problem | Solution |

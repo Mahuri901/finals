@@ -42,7 +42,7 @@ This does two things automatically:
 
 ## 2. CREATE TWO NEW FILES
 
-### `constants/student.ts` — "WHO is scanning"
+### `constants/student.ts` — "WHO is scanning"[text](../../module2-to-module3-changes.md)
 
 ```ts
 export const STUDENT_ID = 'STUDENT-2026-001';
@@ -123,7 +123,13 @@ const handleScanAgain = () => {
   setScanned(false);
   setLastData(null);
   setMessage(null);
-};
+};{scanned && message && (
+  <Text
+    style={[styles.scanResult, success ? styles.success : styles.error]}
+  >
+    {message}
+  </Text>
+)}
 ```
 
 ### Change 5 — Overlay: add the result line
